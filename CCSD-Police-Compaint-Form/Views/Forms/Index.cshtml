@@ -1,0 +1,132 @@
+﻿@model IEnumerable<CCSD_Police_Compaint_Form.Models.Form>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationOfIncident)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComplaintTypes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfIncident)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NameOfEmployees)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BadgeNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DetailsToHelpIdentifyEmployee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SummaryOfComplaint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Witnesses)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationOfIncident)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComplaintTypes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfIncident)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameOfEmployees)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BadgeNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DetailsToHelpIdentifyEmployee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SummaryOfComplaint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Witnesses)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
